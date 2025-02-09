@@ -45,24 +45,24 @@ User access management was crucial, as losing wallet addresses or passwords woul
 Follow these steps to get the project up and running on your local machine:
 
 ## 1. Clone the Repository
-
-git clone [https://github.com/your-repo/project-name.git](https://github.com/Saravanakumar2005/Certificate_Verification.git)
-cd Certificate_Verification
+    
+    git clone [https://github.com/your-repo/project-name.git](https://github.com/Saravanakumar2005/Certificate_Verification.git)
+    cd Certificate_Verification
 
 ## 2. Install Dependencies
 
 Navigate to the project directory and install the required dependencies:
 
-cd React
-cd gov_portal
-npm install
+    cd React
+    cd gov_portal
+    npm install
 
-cd React
-cd client_portal
-npm install
+    cd React
+    cd client_portal
+    npm install
 
-cd Flask-Backend
-pip install requirement.txt
+    cd Flask-Backend
+    pip install requirement.txt
 
 # Kubo IPFS Installation Guide
 
@@ -117,7 +117,7 @@ Step 4: Start the Kubo IPFS Daemon
 
 Start the Kubo IPFS node:
 
-./kubo daemon
+    ./kubo daemon
 
 This will start the IPFS daemon, which enables your machine to participate in the IPFS network. The daemon will run in the terminal, and you should see output confirming that your IPFS node is running.
 
@@ -133,26 +133,26 @@ Replace the placeholders with your actual keys and values.
 
 Compile the smart contracts using Hardhat:
 
-npx hardhat compile
+    npx hardhat compile
 
 ## 5. Deploy the Smart Contracts
 
 Deploy the contracts to the desired network (e.g., Polygon zkEVM) if you want to create a new contract instead of using ours:
 
-npx hardhat ignition deploy ignition/modules/Lock.js --network zkEVM  --deployment-id <DeploymentId>    
+    npx hardhat ignition deploy ignition/modules/Lock.js --network zkEVM  --deployment-id <DeploymentId>    
 
 ## 6. Run the Frontend
 
 Start the frontend application:
 
-npm run dev
+    npm run dev
 
 On both the react apps
 
 ## 7. Run the Backend
 
-cd Flask-Backend
-python server.py
+    cd Flask-Backend
+    python server.py
 
 ## 8. Interact with the Application
 
