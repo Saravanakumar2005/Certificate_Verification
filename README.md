@@ -40,6 +40,14 @@ User access management was crucial, as losing wallet addresses or passwords woul
 - 🔍 OCR
 - ⛓️ Ethereum
 
+### Why we used Polygon's zkevm instead of air chain:
+
+One key reason to choose Polygon zkEVM over AirChain is the maturity and support of Polygon zkEVM's ecosystem. Polygon zkEVM has a well-established community, robust documentation, and a wide range of educational resources like tutorials, videos, and forums. This makes it much easier to get started and find solutions to any issues you encounter.
+
+In contrast, AirChain is relatively newer and doesn't have the same level of developer resources or community support. As you mentioned, the lack of sufficient documentation and educational content is a big challenge when trying to learn and use a new platform. Polygon zkEVM, on the other hand, offers a more proven, developer-friendly solution with greater availability of tools, libraries, and tutorials that make the development process smoother and faster.
+
+For someone looking to quickly adopt a zk-based layer-2 solution with strong resources and community backing, Polygon zkEVM is definitely a more accessible choice.
+
 ### 🛠️ Steps to Set Up the Project
 
 Follow these steps to get the project up and running on your local machine:
