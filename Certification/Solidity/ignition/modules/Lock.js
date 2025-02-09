@@ -1,15 +1,15 @@
 const { buildModule } = require("@nomicfoundation/hardhat-ignition/modules");
 
 
-module.exports = buildModule("VerifierContractModule", (m) => {
+module.exports = buildModule("VerifierContract", (m) => {
 
   // Deploy the VerifierContract (Implementation)
-  const verifierContract = m.contract("VerifierContract");
+  const VerifierContract = m.contract("VerifierContract");
 
   
-  console.log("VerifierContract deployed at:", verifierContract.address);
+  console.log("VerifierContract deployed at:", VerifierContract.address);
 
 
 
-  return { verifierContract };
+  return { VerifierContract };
 });

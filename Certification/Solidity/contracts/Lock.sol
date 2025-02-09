@@ -37,7 +37,7 @@ contract VerifierContract {
         string fileId;
         string fileName;
         address requester;
-        uint256 duration;  // The duration for which the permission is requested
+        uint256 duration;  
     }
 
     mapping(address => PermissionRequest[]) private _holderRequests;
@@ -198,11 +198,11 @@ contract VerifierContract {
                 }
                 emit PermissionRequestHandled(_fileId, msg.sender, _requester, _granted);
 
-                // Remove the request by shifting the elements
+
                 if (i != length - 1) {
-                    requests[i] = requests[length - 1]; // Move the last element to the current index
+                    requests[i] = requests[length - 1]; 
                 }
-                requests.pop(); // Remove the last element
+                requests.pop(); 
 
                 return;
             }
@@ -210,5 +210,26 @@ contract VerifierContract {
         }
 
         revert RequestNotFound();
+    }
+
+    function transferDocuments(address _from, address _to) external {
+        string[] storage fileIds = _holderFiles[_from];
+        uint256 length = fileIds.length;
+
+        for (uint256 i = 0; i < length; ) {
+            string storage fileId = fileIds[i];
+            string storage fileHash = _idToFileHash[fileId];
+            FileInfo storage fileInfo = _files[fileHash];
+
+            if (fileInfo.holder != _from) {
+                continue;
+            }
+
+            fileInfo.holder = _to;
+
+            _holderFiles[_to].push(fileId);
+
+            unchecked { ++i; }
+        }
     }
 }
